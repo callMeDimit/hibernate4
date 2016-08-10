@@ -4,7 +4,8 @@
 "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
-		<mapping resource="com/dimit/base/entity/Event.hbm.xml" />
+		<!-- 1、resource 使用配置文件  2、class使用注解-->
+		<mapping resource="com/dimit/base/entity/Event.hbm.xml"/>
 		<mapping resource="com/dimit/base/entity/Person.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

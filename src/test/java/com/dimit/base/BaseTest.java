@@ -33,5 +33,18 @@ public class BaseTest {
 		session.getTransaction().commit();
 		sf.close();
 	}
+	
+	@Test
+	public void findList() {
+		SessionFactory sf = HibernateUtil.getSessionFactory();
+		Session session = sf.getCurrentSession();
+		session.beginTransaction();
+		List list = session.createQuery("select e from Event e").list();
+		list.forEach((u) -> {
+			System.out.println(u);
+		});
+		session.getTransaction().commit();
+		sf.close();
+	}
 
 }
